@@ -33,4 +33,5 @@ class LocationDetail extends StatelessWidget {
   List<Widget> textSections(Location location) {            //*TextSection Widgets
     return location.facts.map((fact) => TextSection(fact.title, fact.text)).toList();
   }
+  
 }

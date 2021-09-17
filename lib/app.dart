@@ -19,9 +19,11 @@ class MyApp extends StatelessWidget {
   ThemeData _theme() {
     return ThemeData(
         appBarTheme: AppBarTheme(
-          textTheme: TextTheme(
+          toolbarTextStyle: TextTheme( 
             headline6: AppBarTextStyle,
-          ),
+          ).bodyText2, titleTextStyle: TextTheme(
+            headline6: AppBarTextStyle, 
+          ).headline6,
         ),
         textTheme: TextTheme(
           headline6: TitleTextStyle,
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
     //Returns Route<dynamic>
     return (settings) {
       final Map<String, dynamic> arguments =
-          settings.arguments as Map<String, dynamic>;
+      settings.arguments as Map<String, dynamic>;
       Widget screen;
       switch (settings.name) {
         case LocationsRoute:
